@@ -1343,7 +1343,6 @@ header .row {
 .main-navigation li a {
   display: block;
   color: #ffffff;
-  width: 9rem;
   padding: 15px 0;
   line-height: 16px;
   border: none;
@@ -1371,7 +1370,26 @@ header .row {
   header .top-bar {
     left: 50px;
   }
+  #main-nav-wrap {
+    display: none; /* Hide the main navigation by default on small screens */
+  }
 }
+
+@media only screen and (max-width: 870px) {
+  .main-navigation {
+    padding: 12px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three columns */
+    grid-auto-rows: auto; /* Automatically adjust row height */
+    grid-gap: 10px 12px;
+  }
+
+  .main-navigation li {
+    // width: 100%; /* Make each list item take up the full width */
+    text-align: center; /* Center the text */
+  }
+}
+
 @media only screen and (max-width: 600px) {
   header .top-bar {
     left: 35px;
